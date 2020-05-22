@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-
-class MyApp2 extends StatelessWidget {
+class Appview1 extends StatelessWidget {
   List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
-
-
-
-
     const StaggeredTile.count(1, 3),
     const StaggeredTile.count(2, 1),
     const StaggeredTile.count(1, 1),
@@ -20,19 +15,66 @@ class MyApp2 extends StatelessWidget {
   ];
 
   List<Widget> _tiles = <Widget>[
-    CardIcon( onTap: (){},  icon: Icons.ac_unit, backgroundColor: Colors.purple, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){}, icon: Icons.description, backgroundColor: Colors.tealAccent, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){},  icon: Icons.add, backgroundColor: Colors.red, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){},  icon: Icons.print, backgroundColor: Colors.yellow, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){}, icon: Icons.comment, backgroundColor: Colors.green, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){},  icon: Icons.search, backgroundColor: Colors.orange, padding: const EdgeInsets.all(5)),
-    CardIcon(onTap: (){}, icon: Icons.share, backgroundColor: Colors.redAccent, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){},icon: Icons.category, backgroundColor: Colors.blue, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){}, icon: Icons.shopping_basket, backgroundColor: Colors.purple, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){},  icon: Icons.send, backgroundColor: Colors.orangeAccent, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){},  icon: Icons.title, backgroundColor: Colors.pink, padding: const EdgeInsets.all(5)),
-    CardIcon( onTap: (){},icon: Icons.add, backgroundColor: Colors.teal, padding: const EdgeInsets.all(5)),
-
+    CardIcon(
+        onTap: () {},
+        icon: Icons.ac_unit,
+        backgroundColor: Colors.purple,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.description,
+        backgroundColor: Colors.tealAccent,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.add,
+        backgroundColor: Colors.red,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.print,
+        backgroundColor: Colors.yellow,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.comment,
+        backgroundColor: Colors.green,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.search,
+        backgroundColor: Colors.orange,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.share,
+        backgroundColor: Colors.redAccent,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.category,
+        backgroundColor: Colors.blue,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.shopping_basket,
+        backgroundColor: Colors.purple,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.send,
+        backgroundColor: Colors.orangeAccent,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.title,
+        backgroundColor: Colors.pink,
+        padding: const EdgeInsets.all(5)),
+    CardIcon(
+        onTap: () {},
+        icon: Icons.add,
+        backgroundColor: Colors.teal,
+        padding: const EdgeInsets.all(5)),
   ];
 
   @override
@@ -54,45 +96,33 @@ class MyApp2 extends StatelessWidget {
   }
 }
 
-
 class CardIcon extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final Function() onTap;
   final IconData icon;
-  final Color borderColor;
   final Color backgroundColor;
-  final Color textColor;
   final Alignment alignment;
 
-
-  CardIcon({
-    @required this.onTap,
-    this.alignment,
-    @required this.icon,
-    @required this.backgroundColor,
-    this.borderColor = Colors.grey,
-    this.textColor = Colors.red,
-    this.padding = const EdgeInsets.all(5)})
-:        assert(backgroundColor != null),
-        assert(borderColor != null),
-        assert(textColor != null),
+  CardIcon(
+      {@required this.onTap,
+      this.alignment,
+      @required this.icon,
+      @required this.backgroundColor,
+      this.padding = const EdgeInsets.all(5)})
+      : assert(backgroundColor != null),
         assert(icon != null),
         assert(onTap != null);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-//      shape: RoundedRectangleBorder(
-//          borderRadius: BorderRadius.only(topRight:  Radius.circular()),
-//          side:BorderSide(width: skeleton.cardOptions.borderWidth,color: skeleton.cardOptions.borderColor)
-//      ),
-    color: backgroundColor,
+      color: backgroundColor,
       margin: padding,
       elevation: 4,
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Container(
         margin: const EdgeInsets.all(10),
-        child:  Icon(icon , color: Colors.black, size: 30),
+        child: Icon(icon, color: Colors.black, size: 30),
       ),
     );
   }

@@ -47,7 +47,15 @@ flutter:
     - map.jpg
     - slideshow.jpg
     - musicCover.jpg
-    - videoCover.png
+    - chair.png
+    - image.jpg
+    - image1.jpg
+    - image2.jpg
+    - image3.jpg
+    - image4.jpg
+    - img47c.jpg
+    - lady.png
+    - lamp.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

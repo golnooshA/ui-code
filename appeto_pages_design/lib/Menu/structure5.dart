@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 
-class MyApp5 extends StatelessWidget {
+class Appview1 extends StatelessWidget {
   List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
 
     const StaggeredTile.count(2, 1),
@@ -20,19 +20,102 @@ class MyApp5 extends StatelessWidget {
   ];
 
   List<Widget> _tiles = <Widget>[
-    CardIconText(text: 'خبرهای برگزیده', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.ac_unit, backgroundColor: Colors.purple, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'اپلیکیشن', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.description, backgroundColor: Colors.lightBlueAccent, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'آمار', onTap: (){},   textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.add, backgroundColor: Colors.red, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'استنباط', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.print, backgroundColor: Colors.green, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'آیفون', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.comment, backgroundColor: Colors.pinkAccent, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'اقتصاد سنجی', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.search, backgroundColor: Colors.orange, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'RStudio', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.share, backgroundColor: Colors.deepPurple, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'اپلیکیشن', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight,icon: Icons.category, backgroundColor: Colors.blue, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'پرتئومیک کاربردی', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.shopping_basket, backgroundColor: Colors.purple, padding: const EdgeInsets.all(5)),
-    CardIconText(text: ' زیست شناسی', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.send, backgroundColor: Colors.orangeAccent, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'آیفون', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.title, backgroundColor: Colors.pink, padding: const EdgeInsets.all(5)),
-    CardIconText(text: 'برگزیده', onTap: (){}, textAlignment: Alignment.topLeft, iconAlignment: Alignment.bottomRight, icon: Icons.add, backgroundColor: Colors.teal, padding: const EdgeInsets.all(5)),
-
+    CardIconText(
+        text: 'ورزشی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.ac_unit,
+        backgroundColor: Colors.deepPurple,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'فرهنگی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.description,
+        backgroundColor: Colors.green,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'اقتصادی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.add,
+        backgroundColor: Colors.red,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'علمی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.print,
+        backgroundColor: Colors.orangeAccent,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'ورزشی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.comment,
+        backgroundColor: Colors.yellow[700],
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'هنری',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.search,
+        backgroundColor: Colors.cyan,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'اقتصادی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.share,
+        backgroundColor: Colors.pinkAccent,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'علمی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.category,
+        backgroundColor: Colors.grey,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'فرهنگی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.shopping_basket,
+        backgroundColor: Colors.purple[800],
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'ورزشی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.send,
+        backgroundColor: Colors.orangeAccent,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'هنری',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.title,
+        backgroundColor: Colors.green,
+        padding: const EdgeInsets.all(4)),
+    CardIconText(
+        text: 'اقتصادی',
+        onTap: () {},
+        textAlignment: Alignment.topRight,
+        iconAlignment: Alignment.bottomLeft,
+        icon: Icons.add,
+        backgroundColor: Colors.teal,
+        padding: const EdgeInsets.all(4)),
   ];
 
   @override

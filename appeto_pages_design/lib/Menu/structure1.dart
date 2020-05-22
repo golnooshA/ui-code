@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-
 class Appview1 extends StatelessWidget {
   List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
     const StaggeredTile.count(1, 1),
@@ -19,42 +18,67 @@ class Appview1 extends StatelessWidget {
   ];
 
   List<Widget> _tiles = <Widget>[
-    CardImage(text: 'خبرهای برگزیده',
+    CardImage(
+        text: 'اقتصادی',
         onTap: () {},
-        image: AssetImage('assets/image3.jpg')),
-    CardImage(text: 'خبرهای اپلیکیشن',
-      onTap: () {},
-      image: AssetImage('assets/sale.jpg'),),
+        image: AssetImage('assets/image.jpg'),
+        textColor: Colors.white),
     CardImage(
-      text: 'خبرها', onTap: () {}, image: AssetImage('assets/catp.jpg'),),
+      text: 'هنری',
+      onTap: () {},
+      image: AssetImage('assets/image3.jpg'),
+    ),
     CardImage(
-      text: ' برگزیده', onTap: () {}, image: AssetImage('assets/catpp.jpg'),),
+      text: 'ورزشی',
+      onTap: () {},
+      image: AssetImage('assets/image1.jpg'),
+    ),
     CardImage(
-      text: 'آیفون', onTap: () {}, image: AssetImage('assets/gift.png'),),
-    CardImage(text: 'خبرهای برگزیده',
+      text: 'فرهنگی',
       onTap: () {},
-      image: AssetImage('assets/form.jpg'),),
-    CardImage(text: 'خبرهای برگزیده',
-      onTap: () {},
-      image: AssetImage('assets/img.jpg'),),
-    CardImage(text: 'اپلیکیشن',
-      onTap: () {},
-      image: AssetImage('assets/lipstick.jpg'),),
-    CardImage(text: 'خبرهای برگزیده',
-      onTap: () {},
-      image: AssetImage('assets/sale.jpg'),),
-    CardImage(text: 'خبرهای برگزیده',
-      onTap: () {},
-      image: AssetImage('assets/gift.png'),),
+      image: AssetImage('assets/image2.jpg'),
+    ),
     CardImage(
-      text: 'آیفون', onTap: () {}, image: AssetImage('assets/catp.jpg'),),
-    CardImage(text: 'خبرهای برگزیده',
+      text: 'علمی',
       onTap: () {},
-      image: AssetImage('assets/lipstick.jpg'),),
-
+      image: AssetImage('assets/forest.png'),
+    ),
+    CardImage(
+      text: 'اقتصادی',
+      onTap: () {},
+      image: AssetImage('assets/image4.jpg'),
+    ),
+    CardImage(
+      text: 'هنری',
+      onTap: () {},
+      image: AssetImage('assets/lamp.png'),
+    ),
+    CardImage(
+      text: 'ورزشی',
+      onTap: () {},
+      image: AssetImage('assets/image.jpg'),
+    ),
+    CardImage(
+      text: 'علمی',
+      onTap: () {},
+      image: AssetImage('assets/image1.jpg'),
+    ),
+    CardImage(
+      text: 'اقتصادی',
+      onTap: () {},
+      image: AssetImage('assets/image.jpg'),
+    ),
+    CardImage(
+      text: 'فرهنگی',
+      onTap: () {},
+      image: AssetImage('assets/image3.jpg'),
+    ),
+    CardImage(
+      text: 'ورزشی',
+      onTap: () {},
+      image: AssetImage('assets/lady.png'),
+    ),
   ];
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -75,30 +99,22 @@ class Appview1 extends StatelessWidget {
   }
 }
 
-
 class CardImage extends StatelessWidget {
   final String text;
   final EdgeInsetsGeometry padding;
   final Function() onTap;
   final ImageProvider image;
-  final Color borderColor;
-  final Color backgroundColor;
   final Color textColor;
   final Alignment alignment;
 
-
-  CardImage({
-    @required this.text,
-    @required this.onTap,
-    this.alignment = Alignment.bottomRight,
-    @required this.image,
-    this.backgroundColor = Colors.green,
-    this.borderColor = Colors.grey,
-    this.textColor = Colors.red,
-    this.padding = const EdgeInsets.all(5)})
+  CardImage(
+      {@required this.text,
+      @required this.onTap,
+      this.alignment = Alignment.bottomRight,
+      @required this.image,
+      this.textColor = Colors.white,
+      this.padding = const EdgeInsets.all(5)})
       : assert(text != null),
-        assert(backgroundColor != null),
-        assert(borderColor != null),
         assert(textColor != null),
         assert(alignment != null),
         assert(image != null),
@@ -108,37 +124,30 @@ class CardImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-//      shape: RoundedRectangleBorder(
-//          borderRadius: BorderRadius.only(topRight:  Radius.circular()),
-//          side:BorderSide(width: skeleton.cardOptions.borderWidth,color: skeleton.cardOptions.borderColor)
-//      ),
       margin: padding,
       elevation: 4,
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Stack(
         alignment: alignment,
         children: <Widget>[
-          Image(image: image,
+          Image(
+              image: image,
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover),
-
           Container(
             padding: const EdgeInsets.all(15),
-            child: Text(text,
+            child: Text(
+              text,
               maxLines: 1,
-//          textDirection: skeleton.mainOptions.direction,
+              textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: textColor,
-                fontSize: 16,
-              ),
+                  color: textColor, fontSize: 16, fontWeight: FontWeight.w600),
             ),
           ),
-
         ],
-
       ),
     );
   }
